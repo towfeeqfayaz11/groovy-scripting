@@ -3,12 +3,12 @@ class MyClass {
         println "test function"
     }
 
-    def static testRun() {
+    static void testRun() {
         println "static test func"
 
     }
 
-    static void main( String args[] ) {
+    static void main( String [] args ) {
         println "MyClass main()"
         MyClass.testRun()
         testRun()
