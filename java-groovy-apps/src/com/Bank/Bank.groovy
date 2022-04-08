@@ -1,9 +1,26 @@
 package com.Bank
 class Account {
-    def interestRate=0
-    def balance = 3000
-    def name=""
-    def accountid=123
+    def interestRate = 0
+    def balance
+    def name
+    def accountid
+
+    //default constructor
+    Account() {
+        println "default constructor called"
+        this.balance=3000
+        this.name=''
+        this.id = 123
+    }
+
+    //parametrised costructor
+    Account(ID, Balance, Name) {
+        println "parametrised constructor called"
+        this.balance=Balance
+        this.name=Name
+        this.id = ID
+    }
+
 
     def checkBalance() {
         println "the balance is " + this.balance
@@ -29,6 +46,11 @@ class Account {
 
 def saving = new Account()
 def loan = new Account()
+
+def loan1 = new Account(121, 6000, 'vijay')
+
+// if no cnstructr is created, this will still automoatically invoke a parametrised constructor
+def loan2 = new Account(name: 'manoj', balance: 2500, id: 231 )
 
 saving.depositAmount(450)
 saving.withdrawAmount(3000)
